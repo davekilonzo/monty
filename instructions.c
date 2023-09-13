@@ -4,7 +4,9 @@
 #include "stack.h"
 #include "instructions.h"
 
-void push(stack_t **stack, unsigned int line_number)
+
+
+void push(stack_t **stack, char *token)
 {
     stack_t *new_node;
 
@@ -25,7 +27,7 @@ void push(stack_t **stack, unsigned int line_number)
     *stack = new_node;
 }
 
-void pall(stack_t **stack, unsigned int line_number)
+void pall(stack_t **stack)
 {
     stack_t *current = *stack;
 
@@ -35,3 +37,5 @@ void pall(stack_t **stack, unsigned int line_number)
         current = current->next;
     }
 }
+
+

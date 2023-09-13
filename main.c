@@ -10,9 +10,9 @@ int main(void)
     char *token = "10";
 
     if (strcmp(opcode, "push") == 0)
-        push(&stack, 1);
+        push(&stack, token);
     else if (strcmp(opcode, "pall") == 0)
-        pall(&stack, 2);
+        pall(&stack);
 
     return 0;
 }
